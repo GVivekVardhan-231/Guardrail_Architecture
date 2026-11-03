@@ -1,0 +1,36 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="prompt-guardwall",
+    version="1.0.0",
+    description="A Multi-Layer Defensive Security Framework and Inline Wall for LLM Prompt Protection",
+    long_description=open("README.md", encoding="utf-8").read() if open("README.md", encoding="utf-8") else "",
+    long_description_content_type="text/markdown",
+    author="Major Project 4-1 Team",
+    packages=find_packages(include=["guardwall", "guardwall.*", "app", "app.*"]),
+    python_requires=">=3.10",
+    install_requires=[
+        "fastapi>=0.115.0",
+        "uvicorn>=0.30.0",
+        "pydantic>=2.7.0",
+        "scikit-learn>=1.4.0",
+        "sentence-transformers>=3.0.0",
+        "torch>=2.2.0",
+        "numpy>=1.26.0",
+        "pandas>=2.2.0",
+        "sqlalchemy>=2.0.0",
+        "httpx>=0.27.0",
+        "joblib>=1.4.0",
+    ],
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Information Technology",
+        "Topic :: Security",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+    ],
+)
